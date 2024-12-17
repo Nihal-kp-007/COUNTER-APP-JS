@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .counter {
+    display: grid;
+    height: 100vh;
+  }
+  
+  .btnContainer {
+    place-self: center;
+    width: 300px;
+    height: 500px;
+    padding: 5px;
+    border-radius: 40px;
+    border: 5px solid #5d6d7e;
+
+  }
+  
+  .display {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .counterLabel {
+      font-size: 10em;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .button {
+    background-color: transparent;
+    padding: 5px;
+    margin-bottom: 3px;
+    border: 2px solid #5b5454;
+    border-radius: 50%;
+    font-weight: 600;
+
+  }
+  .text {
+      font-size: 5em;
+      color: red;
+      text-align: center;
+  }
+
+  .buttons i {
+    font-size: 2rem;
+  }
+  
+  .input {
+    visibility: hidden;
+  }
+  .label {
+    background-color: black;
+    height: 23px;
+    width: 54px;
+    position: absolute;
+    border-radius: 20px;
+    cursor: pointer;
+    
+  }
+  .circle {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+    animation: toggleOff .3s linear forwards;
+  }
+  
+  
+  .input:checked + .label {
+    background-color: white;
+  }
+  
+  .input:checked + .label .circle {
+   background-color: black;
+   animation: toggleOn .3s linear forwards;
+  }
+  
+  @keyframes toggleOn {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(30px);
+    }
+  }
+  @keyframes toggleOff {
+    0% {
+      transform: translateX(30px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
